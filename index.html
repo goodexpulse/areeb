@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أريب | Areeb - محطة الروابط الذكية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --deep-intel-blue: #0A0F1A;
+            --pulse-navy: #0B2A5B;
+            --neutral-white: #FFFFFF;
+            --electric-cyan: #00E0FF;
+            --soft-cyan: #7DF2FF;
+        }
+
+        body {
+            background-color: var(--deep-intel-blue);
+            background: radial-gradient(circle at top, var(--pulse-navy) 0%, var(--deep-intel-blue) 100%);
+            min-height: 100vh;
+            color: var(--neutral-white);
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .avatar-container {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: var(--deep-intel-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+            position: relative;
+            border: 2px solid var(--electric-cyan);
+            box-shadow: 0 0 30px rgba(0, 224, 255, 0.2);
+        }
+
+        .pulse-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 224, 255, 0.15) 0%, transparent 70%);
+            animation: pulse-ring 4s infinite ease-in-out;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.4; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(0.95); opacity: 0.4; }
+        }
+
+        .link-card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.1);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(12px);
+        }
+
+        .link-card:hover {
+            background: rgba(0, 224, 255, 0.08);
+            border-color: var(--soft-cyan);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .link-card span {
+            color: var(--neutral-white);
+            font-weight: 500;
+            font-size: 17px;
+        }
+
+        .primary-link {
+            background: var(--soft-cyan);
+            border: none;
+        }
+
+        .primary-link span {
+            color: var(--deep-intel-blue);
+            font-weight: 600;
+        }
+
+        .brand-footer {
+            margin-top: auto;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .os-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--electric-cyan);
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+
+        .os-power {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Avatar Section -->
+    <div class="avatar-container">
+        <div class="pulse-glow"></div>
+        <svg width="65" height="65" viewBox="0 0 100 100" fill="white">
+            <path d="M50 15L85 35V65C85 80 50 90 50 90C50 90 15 80 15 65V35L50 15Z" />
+            <rect x="35" y="48" width="30" height="4" fill="#0A0F1A" />
+        </svg>
+    </div>
+
+    <!-- Identity -->
+    <h1 style="font-family: 'Cairo'; font-weight: 700; font-size: 30px; margin-bottom: 8px;">أريب | Areeb</h1>
+    <p style="opacity: 0.9; font-size: 16px; margin-bottom: 40px; text-align: center; max-width: 320px; line-height: 1.6;">
+        وكيلك العقاري فائق الذكاء..<br>
+        <span style="color: var(--soft-cyan); font-weight: 500;">مدعوم بنظام PulseWise لتشغيل الذكاء الشخصي والاصطناعي.</span>
+    </p>
+
+    <!-- Links List -->
+    <a href="https://wa.me/YOUR_NUMBER" class="link-card primary-link">
+        <span>راسل أريب مباشرة (واتساب)</span>
+    </a>
+
+    <a href="https://t.me/Pulsewise_Osool_bot" class="link-card">
+        <span>بوت الذكاء العقاري (تليجرام)</span>
+    </a>
+
+    <a href="https://facebook.com/AreebPulse" class="link-card">
+        <span>مجتمع أريب على فيسبوك</span>
+    </a>
+
+    <a href="https://instagram.com/AreebPulse" class="link-card">
+        <span>تابع نبض السوق على إنستجرام</span>
+    </a>
+
+    <!-- Footer -->
+    <div class="brand-footer">
+        <div class="os-tag">PULSEWISE YouAI OS</div>
+        <div class="os-power">THE OPERATING SYSTEM FOR PERSONAL INTELLIGENCE</div>
+    </div>
+
+</body>
+</html>
